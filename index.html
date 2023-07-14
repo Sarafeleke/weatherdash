@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<style>
+       table,td{    
+       padding-right: 20px;
+        border: 1px solid black;   
+      }
+    #nav1{
+           margin-top: 5px;
+           margin-bottom: 20px;
+    }
+    #va1{
+        background-color: white;
+        padding-top: 5px;
+        padding-bottom: 10px;
+    }
+   #p1{
+    padding-left: 30px;    
+        
+    }
+   
+    #head{
+        font-size: 35px;
+        padding-top: 70px;
+        padding-left: 180px;
+        font-family: 'Times New Roman', Times, serif;
+        color: darkblue;
+    }
+    #para{
+        color: black;
+        padding-left: 20px;
+    }
+    #nav2{
+        background-color: lightblue;
+    }
+
+    #h2{
+        font-size: 45px;
+        font-family: 'Times New Roman', Times, serif;
+     color:lightblue;
+    margin-top: 10px;
+    text-align: center;
+    }
+  #shadow{
+    margin-top: 20px;
+    margin-right: 10px;
+    height:400px
+  }
+  #shadow1{
+    margin-left: 20px;
+    height:400px
+  }
+  #shadow2{
+    height:400px;
+  }
+  #container1{
+    height: 300px;
+  }
+  #container3{
+    
+    height: 300px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ;
+  }
+  .highcharts-figure,
+.highcharts-data-table table {
+    min-width: 310px;
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+#container {
+    height: 300px;
+    padding-left: 50px;
+    margin-right: 90px;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+.highcharts-figure1,
+.highcharts-data-table table {
+    min-width: 310px;
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+.highcharts-data-table table {
+    font-family: Verdana, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid #ebebeb;
+    margin: 10px auto;
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.highcharts-data-table caption {
+    padding: 1em 0;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.highcharts-data-table th {
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.highcharts-data-table td,
+.highcharts-data-table th,
+.highcharts-data-table caption {
+    padding: 0.5em;
+}
+
+.highcharts-data-table thead tr,
+.highcharts-data-table tr:nth-child(even) {
+    background: #f8f8f8;
+}
+
+.highcharts-data-table tr:hover {
+    background: #f1f7ff;
+}
+#container2 {
+    height: 300px;
+    margin-right: 30px;
+}
+
+.highcharts-figure,
+.highcharts-data-table table {
+    min-width: 310px;
+    max-width: 800px;
+    margin: 1em auto;
+}
+
+#sliders td input[type="range"] {
+    display: inline;
+}
+
+#sliders td {
+    padding-right: 1em;
+    white-space: nowrap;
+}
+#pol{
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 150px;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    background-color:lightblue;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+}
+#shadow3{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+#c1{
+    font-family:'Times New Roman', Times, serif;
+    font-size:30px;
+    color:white;
+
+}  
+.fluid-container{
+background-color: lightblue; 
+}   
+#curve1{
+    align-content: center;
+} 
+#shadow0{
+   margin-left:50px;
+    margin-top: 40px;
+    height: 350px;
+    width: 300px;
+    background-image: url(rain.gif);
+}
+#shadow4{
+    margin-left: 20px;
+}
+</style>
+</head>
+<body>
+<div class="fluid-container">
+<div id="va1">
+<h2 id="h2">WEATHER IN ETHIOPIA</h2>
+</div>
+<div class="row">
+<div class="col-lg-6 col-md-6 col-sm-12 " id="curve1" >
+    <div class="shadow p-3 mb-5 bg-body-tertiary rounded" id="shadow0">
+    <img src  ="cloud1.png"width ="100"height="150"  style="padding-left: 25;">
+    </div>
+</div>
+    <div class="col-lg-6 col-md-6 col-sm-12">
+  <div class="shadow p-3 mb-5 bg-body-tertiary rounded" id="shadow">
+    <figure class="highcharts-figure1">
+        <div id="container2"></div>
+        <p class="highcharts-description">
+     This chart shows the temperature of Ethiopa for next five days.
+        </p>
+    </figure>
+</div>
+</div>
+</div>
+<div id="nav2">
+<nav class="d-flex" id="nav1">
+  <p id="p1">Search and View Climatic parameters of Cities in ETHIOPIA</p><input class="form-control me-2" type="search" id="input-field"placeholder="Enter city in ETHIOPIA" aria-label="Search">
+            <button class="btn btn-outline-dark" id="search-button" type="submit">Search</button>
+      </nav>
+    </div>
+  <div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12">
+  <div class="shadow p-3 mb-5 bg-body-tertiary rounded" id="shadow1"><figure class="highcharts-figure1">
+    <div id="container1"></div>
+    <p class="highcharts-description">   
+    </p>
+</figure>
+</div></div>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <div class="col-lg-6 col-md-6 col-sm-12">
+  <div class="shadow p-3 mb-5 bg-body-tertiary rounded" id="shadow2">
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+        <p class="highcharts-description">
+            humidity,Pressure and sea_level
+        </p>
+    </figure>
+   </div>
+</div>
+</div>
+
+<div class="row">
+    <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="shadow p-3 mb-5 bg-body-tertiary rounded" id="shadow4"> 
+        <table class="mt-1" id="t-1">
+            <tbody><tr>
+           <td>City</td>   
+           <td>Pressure</td> 
+           <td>humidity</td> 
+           <td>Sea level</td> 
+            </tr>
+           </tbody></table>
+           </div>
+        </div>
+    <div class="col-lg-6 col-md-6 col-sm-12">
+        <div>
+            <p id="pol">climate pollution in ETHIOPIA</p>
+        </div>
+<div class="shadow p-3 mb-5 bg-body-tertiary rounded" id="shadow3"> 
+    <figure class="highcharts-figure2">
+    <div id="container3"></div>
+    <p class="highcharts-description">
+     Air polluting gases in Ethiopia
+    </p>
+</figure></div></div>
+</div>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script>
+    const searchButton = document.querySelector('#search-button');
+    const inputField = document.querySelector('#input-field');
+    searchButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        const inputValue = inputField.value;
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputValue}&appid=61766f013d866e53e3632ae06a816767`)
+            .then(response => response.json())
+            .then(data => {
+                let humv = data.main.humidity;
+                let pessv = data.main.pressure;
+                let seav = data.main.sea_level;
+                var mintemp = data.main.temp_min;
+                var maxtemp = data.main.temp_max;
+                var table = document.getElementById("t-1");
+var row = table.insertRow();
+var cell = row.insertCell();
+ cell.innerHTML = inputValue;
+ cell = row.insertCell();
+ cell.innerHTML =  data.main.pressure;
+ cell = row.insertCell();
+ cell.innerHTML = data.main.humidity;
+ cell = row.insertCell();
+ cell.innerHTML = data.main.sea_level;
+                Highcharts.chart('container', {
+                    chart: {
+                        type: 'bar'
+                    },
+                    title: {
+                        text: 'HUMIDITY, PRESSURE, AND SEA LEVEL',
+                        align: 'left'
+                    },
+                    xAxis: {
+                        categories: ['CITY: ' + inputValue],
+                        title: {
+                            text: null
+                        },
+                        gridLineWidth: 1,
+                        lineWidth: 0
+                    },
+                    yAxis: {
+                        min: 0,
+                        title: {
+                            text: 'Numbers',
+                            align: 'high'
+                        },
+                        labels: {
+                            overflow: 'justify'
+                        },
+                        gridLineWidth: 0
+                    },
+                    plotOptions: {
+                        bar: {
+                            borderRadius: '30%',
+                            dataLabels: {
+                                enabled: true
+                            },
+                            groupPadding: 0.1
+                        }
+                    },
+                    legend: {
+                        layout: 'vertical',
+                        align: 'right',
+                        verticalAlign: 'top',
+                        x: -40,
+                        y: 50,
+                        floating: true,
+                        borderWidth: 1,
+                        backgroundColor: Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF',
+                        shadow: true
+                    },
+                    credits: {
+                        enabled: false
+                    },
+                    series: [{
+                        name: 'Humidity',
+                        data: [humv]
+                    }, {
+                        name: 'Pressure',
+                        data: [pessv]
+                    }, {
+                        name: 'Sea Level',
+                        data: [seav]
+                    }]
+                });
+                Highcharts.chart('container1', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Maximum and Minimun Temperature',
+            align: 'left'
+        },
+        xAxis: {
+            categories: ['max temp','min temp'],
+            crosshair: true,
+            accessibility: {
+                description: 'Average temp'
+            }
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'degree celsius'
+            }
+        },
+        tooltip: {
+            valueSuffix: ''
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        series: [{
+    name: 'Average Temperature',
+    data: [maxtemp, mintemp]
+}]
+    })
+            })
+            
+            .catch(error => console.error(error));
+    })
+
+fetch("https://api.openweathermap.org/data/2.5/weather?lat=40.4897&lon=9.1450&appid=cab5cfbac1d38bd43062f32b3d0264fe")
+            .then(response => response.json())
+            .then(data => {
+                let sea_level=data.main.sea_level
+                let glevel=data.main.grnd_level;
+                let tempd=data.wind.deg;
+                let gust=data.main.temp;
+                console.log(tempd,gust,glevel)
+               
+    .catch(error => console.error(error));
+            });
+            
+fetch("http://api.openweathermap.org/data/2.5/air_pollution?lat=50&lon=44&appid=cab5cfbac1d38bd43062f32b3d0264fe")
+           .then(response => response.json())
+            .then(data => {
+                let carbon=data.list[0].components.co
+                let Noxide=data.list[0].components.no
+                let Ndioxide=data.list[0].components.no2
+                let ozone=data.list[0].components.o3
+                let Sdioxide=data.list[0].components.so2
+                console.log(carbon)
+                Highcharts.chart('container3', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Air polluting gases in ethiopia',
+        align: 'left'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+            }
+        }
+    },
+    series: [{
+        name: 'Gases',
+        colorByPoint: true,
+        data: [{
+            name: 'Carbon',
+            y: carbon,
+            sliced: true,
+            selected: true
+        }, {
+            name: 'Nitrogen momoxide',
+            y: Noxide
+        },  {
+            name: 'Nitrogen dioxide',
+            y: Ndioxide
+        }, {
+            name: 'ozone',
+            y: ozone
+        }, {
+            name: 'sulphur dioxide',
+            y: Sdioxide
+        
+        }]
+    }]
+})  .catch(error => console.error(error));
+        })
+        fetch("https://api.openweathermap.org/data/2.5/forecast?lat=40.4897&lon=9.1450&appid=cab5cfbac1d38bd43062f32b3d0264fe")
+.then(response => response.json())
+            .then(data =>{
+                let temp1=data.list[0].main.temp;
+                let temp2=data.list[4].main.temp;
+                let temp3=data.list[12].main.temp;
+                let temp4=data.list[20].main.temp;
+                let temp5=data.list[28].main.temp;
+              let title7 =data.list[0].main.sea_level
+              let title8 =data.list[0].main.grnd_level
+              let title9 =data.list[0].main.humidity
+              let title10 =data.list[0].weather.description
+                console.log(temp1,temp2)
+              
+    Highcharts.chart('container2', {
+    chart: {
+        type: 'spline'
+    },
+    title: {
+        text: 'Temperature of Ethiopia for next five days '
+    },
+    xAxis: {
+        categories: ['July 15', 'July 16', 'July 17', 'July 18','July 19'],
+        accessibility: {
+            description: 'date'
+        }
+    },
+    yAxis: {
+        title: {
+            text: 'Temperature'
+        },
+        labels: {
+            format: '{value}°'
+        }
+    },
+    tooltip: {
+        crosshairs: true,
+        shared: true
+    },
+    plotOptions: {
+        spline: {
+            marker: {
+                radius: 4,
+                lineColor: '#666666',
+                lineWidth: 1
+            }
+        }
+    },
+    series: [{
+        data: [temp1,temp2,temp3,temp4,temp5,{
+}]
+}]
+})
+let curve=document.getElementById('shadow0')
+let weather=document.createElement('p')
+weather.setAttribute('id', 'c1')
+let title = document.createElement('h6') 
+title.textContent ='Ethiopia'
+let title1 = document.createElement('h6')
+title1.textContent ='Current temperature:  '+temp1+'K'
+let title2= document.createElement('h6')
+title2.textContent ='Sea_level: '+ title7+'m'
+let title3= document.createElement('h6')
+title3.textContent ='Ground_level :'+ title8
+let title4= document.createElement('h6')+'m'
+title4.textContent ='Humididty :'+ title9
+let title5= document.createElement('h6')
+title5.textContent ='weather :'+ title10
+curve.append(weather)
+weather.appendChild(title)
+weather.appendChild(title1)
+weather.appendChild(title2)
+weather.appendChild(title3)
+weather.appendChild(title4)
+weather.appendChild(title5)
+})
+</script>
+</body>
+</html>
